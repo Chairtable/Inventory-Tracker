@@ -1,0 +1,34 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+</head>  
+<body>  
+<form method="POST" class="post-form" action="/add">  
+  {% csrf_token %}  
+ 
+<br>  
+<center>
+<h3>Enter Details</h3>  
+
+<label>Item Id:</label>  
+<div class="col-sm-4">  
+ {{ form.iid }}  
+</div>  
+
+<label>Item Name:</label>  
+<div class="col-sm-4">  
+ {{ form.iname }}  
+</div>  
+
+<label>Quantity:</label>  
+<div class="col-sm-4">  
+ {{ form.iquantity }}  
+</div>  
+
+<button type="submit" class="btn btn-primary">Submit</button>  
+</center>
+</form>  
+</body>  
+</html>

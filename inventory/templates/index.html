@@ -1,0 +1,35 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Inventory</title>    
+</head>  
+<body>
+<center>
+    <b><u>Inventory Tracking</u></b><br><br>
+<table>  
+    <tr>  
+        <th>Item ID</th>  
+        <th>Item Name</th>  
+        <th>Quantity</th>
+        <th>Actions</th>  
+    </tr>    
+{% for item in inventoryFull %}  
+    <tr>  
+        <td style='text-align:center; vertical-align:middle'>{{ item.iid }}</td>  
+        <td style='text-align:center; vertical-align:middle'>{{ item.iname }}</td>  
+        <td style='text-align:center; vertical-align:middle'>{{ item.iquantity }}</td>  
+        <td>  
+            <a href="/edit/{{ item.id }}">Edit</a>  
+            <a href="/delete/{{ item.id }}">Delete</a>  
+        </td>  
+    </tr>  
+{% endfor %}  
+</table>
+<br><br>  
+<a href="/add" class="btn btn-primary">Add A New Entry</a>
+<br>
+<a href="/exportcsv" class="btn btn-primary">Download all Data as a CSV</a>
+</center>
+</body>  
+</html>

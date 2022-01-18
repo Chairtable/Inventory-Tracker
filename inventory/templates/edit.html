@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <title>Index</title>  
+</head>  
+<body>  
+<form method="POST" class="post-form" action="/update/{{inventory.id}}">  
+  {% csrf_token %}  
+
+<br>
+  <center>
+    <h3>Edit Item Details</h3>  
+    <label>Item Id:</label>  
+    <div class="col-sm-4">  
+      <input type="text" name="iid" id="id_iid" value="{{ inventory.iid }}"/>  
+    </div>  
+
+    <label>Item Name:</label>  
+    <div class="col-sm-4">  
+      <input type="text" name="iname" id="id_iname" value="{{ inventory.iname }}" />  
+    </div>  
+    
+    <label>Quantity:</label>  
+    <div class="col-sm-4">  
+      <input type="number" name="iquantity" id="id_iquantity" value="{{ inventory.iquantity }}" />  
+    </div>  
+  
+    <label></label>  
+    <div class="col-sm-4">  
+      <button type="submit" class="btn btn-success">Update</button>  
+    </div>
+  </center>    
+</form>  
+</body>  
+</html>
