@@ -1,0 +1,1 @@
+A simple barebones Inventory Management web application built in Python using Django and SQL. Has basic CRUD functionality with more features to be added as time progress.
